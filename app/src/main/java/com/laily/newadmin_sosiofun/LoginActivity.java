@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.laily.newadmin_sosiofun.UI.MainActivity;
@@ -22,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private SharedPrefManager sharedPrefManager;
     private EditText etUsername;
     private EditText etPassword;
+    private TextView forgotpass;
     private Button btnLogin;
     private ProgressBar pbLogin;
     private ImageView ivLogin;
@@ -39,6 +41,25 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         pbLogin = findViewById(R.id.progressBar);
         ivLogin = findViewById(R.id.ivLogin);
+        forgotpass = findViewById(R.id.textView);
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this, "Kirim Email", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"laily.hamidah@students.amikom.ac.id"});
+//                intent.putExtra(Intent.EXTRA_CC, new String[] {"guntoroagun@gmail.com"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Lupa Password");
+                intent.putExtra(Intent.EXTRA_TEXT, "Kirimkan Kembali Password dan Username Sosiofun");
+
+                try {
+                    startActivity(Intent.createChooser(intent, "Kirim Email?"));
+                } catch (android.content.ActivityNotFoundException ex) {
+                    //do something else
+                }
+            }
+        });
 
         login();
     }
