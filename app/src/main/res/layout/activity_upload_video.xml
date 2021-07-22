@@ -5,8 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@drawable/ic_bgg"
     tools:context=".UI.UploadVideoActivity">
+
+    <ImageView
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/videou"/>
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
     <VideoView
+      android:layout_below="@id/image"
         android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="300dp" />
@@ -16,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/videoView"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:background="@color/white"
         android:hint="Give Title Here..."
         android:inputType="textPersonName|textCapSentences"
@@ -28,17 +43,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etTitle"
-        android:layout_marginTop="5dp"
-        android:background="@color/purple_700"
-        android:hint="Upload Video"
-        android:textColor="@color/white" />
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bgbtn"
+       android:text="Upload video"
+        android:textColor="@color/black" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/pickVideoBtn"
+        android:layout_above="@id/etTitle"
+        android:layout_margin="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_video_library"/>
+       android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_video_library" />
 </RelativeLayout>
