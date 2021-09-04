@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">NewAdmin-Sosiofun</string>
+    <string name="app_name">Admin-Sosiofun</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="textt">Dosen Universitas AMIKOM Yogyakarta\ndan SMA N 1 Turi pada mata pelajaran\nSosiologi Kelas X\ndengan Guru Pendamping Ibu\n<b>Dewi Rohmani, S.Pd</b></string>
+    <string name="tim">Irma Rofni Wulandari, S.Pd., M.Eng\ndan\nLaily Nur Hamidah</string>
 </resources>

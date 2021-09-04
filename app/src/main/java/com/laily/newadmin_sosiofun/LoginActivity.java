@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.laily.newadmin_sosiofun.UI.BottomActivity;
 import com.laily.newadmin_sosiofun.UI.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -87,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d("password","pass"+password);
 
                         if (username.equals(spUsername) && password.equals(spPassword)){
-                            Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                            Intent i = new Intent(LoginActivity.this, BottomActivity.class);
                             Toast.makeText(LoginActivity.this, "Hai Admin!", Toast.LENGTH_SHORT).show();
                             sharedPrefManager.saveIsLogin(true);
                             finishAffinity();

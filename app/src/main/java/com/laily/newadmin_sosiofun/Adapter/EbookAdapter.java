@@ -70,7 +70,7 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
         holder.pdfDelete.setOnClickListener(v -> {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setMessage("Are you sure to delete this note ? ");
+            builder.setMessage("Are you sure to delete this pdf ? ");
             builder.setCancelable(true);
             builder.setPositiveButton(
                     "OK",

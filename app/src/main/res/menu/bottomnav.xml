@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item1"
+        android:title="Home"
+        app:cnb_textColor="#fff"
+        app:cnb_iconColor="#fff"
+        app:cnb_backgroundColor="#030047"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/item2"
+        android:title="Pengembang"
+        app:cnb_textColor="#fff"
+        app:cnb_iconColor="#fff"
+        app:cnb_backgroundColor="#030047"
+        android:icon="@drawable/ic_profile"/>
+
+</menu>
